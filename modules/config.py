@@ -1,6 +1,6 @@
 # config.py
-BOT_NAME = "tfffr_bot"
-BOT_TOKEN = "7719688210:hghhfff"
-API_ID = 25038096
-API_HASH = "098112aae38be62db58363267a061b59"
+BOT_NAME = "Hde632_62skir_8bot"
+BOT_TOKEN = "7576691148:AAH5k_diAzJJlgyMh3q9zl3MBaVsrWv6ALE"
+API_ID = 14578218
+API_HASH = "1910055ec43e4b46efeb768a82bdaf68"
 MONGO_URI = "mongodb+srv://mrnobody:modernhackers@mrnobody.q8e87ij.mongodb.net/?retryWrites=true&w=majority&appName=MrNobody"
