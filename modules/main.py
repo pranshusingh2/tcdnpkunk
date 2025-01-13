@@ -40,12 +40,12 @@ bot = Client("bot",
 # Get the MongoDB collection for this bot
 collection = get_collection(BOT_NAME, MONGO_URI)
 # Constants
-OWNER_IDS = [5201266500]  # Replace with the actual owner user IDs
+OWNER_IDS = [5003683239]  # Replace with the actual owner user IDs
 
 # Global variables
-log_channel_id = -1002353015925
+log_channel_id = -1002478348920
 authorized_users = []
-ALLOWED_CHANNEL_IDS = [-1001899984578]
+ALLOWED_CHANNEL_IDS = [-1002478348920]
 my_name = "𝐏𝐑𝐀𝐒𝐇𝐀𝐍𝐓 𝐒𝐈𝐍𝐆𝐇❇️🇮🇳❤️"
 overlay = None 
 accept_logs = 0
@@ -692,7 +692,7 @@ async def set_max_running_time_handler(_, message):
 
 #=================== TXT CALLING COMMAND ==========================
 
-@bot.on_message(filters.command(["joker"]))
+@bot.on_message(filters.command(["HITLER"]))
 async def luminant_command(bot: Client, m: Message):
     global bot_running, start_time, total_running_time, max_running_time
     global log_channel_id, my_name, overlay, accept_logs
