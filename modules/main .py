@@ -40,12 +40,12 @@ bot = Client("bot",
 # Get the MongoDB collection for this bot
 collection = get_collection(BOT_NAME, MONGO_URI)
 # Constants
-OWNER_IDS = [5201266500]  # Replace with the actual owner user IDs
+OWNER_IDS = [5003683239]  # Replace with the actual owner user IDs
 
 # Global variables
-log_channel_id = -1002353015925
+log_channel_id = -1002478348920
 authorized_users = []
-ALLOWED_CHANNEL_IDS = [-1001899984578]
+ALLOWED_CHANNEL_IDS = [-1002478348920]
 my_name = "𝐏𝐑𝐀𝐒𝐇𝐀𝐍𝐓 𝐒𝐈𝐍𝐆𝐇❇️🇮🇳❤️"
 overlay = None 
 accept_logs = 0
@@ -692,7 +692,7 @@ async def set_max_running_time_handler(_, message):
 
 #=================== TXT CALLING COMMAND ==========================
 
-@bot.on_message(filters.command(["joker"]))
+@bot.on_message(filters.command(["Hitler2"]))
 async def luminant_command(bot: Client, m: Message):
     global bot_running, start_time, total_running_time, max_running_time
     global log_channel_id, my_name, overlay, accept_logs
@@ -1043,10 +1043,12 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
             elif 'videos.classplusapp' in url:
                 url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0'}).json()['url']
 
-            elif "master.mpd" in url:
-                vid_id = url.split('/')[-2]
-                url = f"https://pw.jarviss.workers.dev?v={vid_id}&quality={raw_text2}"
-
+            url = 'https://d1d34p8vz63oiq.cloudfront.net/380afa7e-c314-4d7a-8e5e-ca2167effd4a/master.mpd'
+           if '/master.mpd' in url and not '/drm/' in url:
+              id = url.split("/")[-2]
+              token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzczNDQ4ODkuODIzLCJkYXRhIjp7Il9pZCI6IjY2ZTgyNmZhMzRiNjY5NmFlYzRiNTkwNyIsInVzZXJuYW1lIjoiNzc1Mjk3MDUwNiIsImZpcnN0TmFtZSI6IkFybmF2IiwibGFzdE5hbWUiOiJWZXJtYSIsIm9yZ2FuaXphdGlvbiI6eyJfaWQiOiI1ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODkiLCJ3ZWJzaXRlIjoicGh5c2ljc3dhbGxhaC5jb20iLCJuYW1lIjoiUGh5c2ljc3dhbGxhaCJ9LCJlbWFpbCI6Ikl0c2FybmF2dmVybWEyMDA3QGdtYWlsLmNvbSIsInJvbGVzIjpbIjViMjdiZDk2NTg0MmY5NTBhNzc4YzZlZiJdLCJjb3VudHJ5R3JvdXAiOiJJTiIsInR5cGUiOiJVU0VSIn0sImlhdCI6MTczNjc0MDA4OX0.c-NGgHyfnmk5ivIMvHwZcPK3Mk4fxE5UgGn1wXGDRWk'
+              api_url = f'https://madxapi-d0cbf6ac738c.herokuapp.com/{id}/master.m3u8?token={token}'
+    
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]} - {my_name}'
 
